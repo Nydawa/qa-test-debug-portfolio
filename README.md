@@ -1,5 +1,6 @@
 # 🐉 Äggeliyonn  
 ## QA / Test & Debug – Jeux vidéo  
+QA / Test & Debug portfolio basé sur des cas réels (modding Unity / MelonLoader).
 
 ---
 
