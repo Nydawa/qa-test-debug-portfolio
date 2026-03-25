@@ -12,12 +12,13 @@ Modèle utilisé pour documenter les tests, les bugs et les analyses QA sur des 
 
 ## 📊 Résumé
 
-- 🔴 Critiques :  
-- 🟠 Majeurs :  
-- 🟡 Mineurs :  
-- 🟢 Visuels :  
+🔴 Critiques :  
+🟠 Majeurs :  
+🟡 Mineurs :  
+🟢 Visuels :  
 
 ### 📌 Statut global
+
 ✔ Corrigés :  
 🔧 En cours :  
 ❗ Restants :  
@@ -29,13 +30,13 @@ Modèle utilisé pour documenter les tests, les bugs et les analyses QA sur des 
 **Objectif global :**  
 Chose attendue  
 
-### Étape X
+### Étape X  
 **Objectif :**  
 
-### Étape Y
+### Étape Y  
 **Objectif :**  
 
-### Étape Z
+### Étape Z  
 **Objectif :**  
 
 ---
@@ -49,7 +50,7 @@ Chose attendue
 **Origine :** Étape X  
 
 #### Conditions
-- (Ex : être sur un objet)
+Être sur un objet  
 
 #### Étapes
 1. a  
@@ -57,32 +58,32 @@ Chose attendue
 3. c  
 
 #### Résultat actuel
--  
+Description du problème  
 
 #### Résultat attendu
--  
+Comportement attendu  
 
 #### Fréquence
--  
+10/10  
 
 #### Reproductibilité
-- Toujours → déclenchable à coup sûr  
-- Parfois → fonctionne une fois sur X  
-- Rare → difficile à reproduire  
+Toujours → déclenchable à coup sûr  
+Parfois → fonctionne une fois sur X  
+Rare → difficile à reproduire  
 
 #### Analyse
-- Semble lié à…  
-- Se produit uniquement si…  
-- Probable conflit entre…  
-- Le problème semble provenir de…  
+Semble lié à…  
+Se produit uniquement si…  
+Probable conflit entre…  
+Le problème semble provenir de…  
 
 #### Statut
-*(choisir une seule valeur)*
-- À corriger  
-- En cours  
-- Corrigé  
-- Non prioritaire (faible impact)  
-- Won’t Fix (décision volontaire)  
+(Choisir une seule valeur)  
+À corriger  
+En cours  
+Corrigé  
+Non prioritaire (faible impact)  
+Won’t Fix (décision volontaire)  
 
 ---
 
@@ -91,7 +92,7 @@ Chose attendue
 **Origine :** Étape Y  
 
 #### Conditions
-- (Ex : être sur un objet)
+Être sur un objet  
 
 #### Étapes
 1. a  
@@ -99,32 +100,32 @@ Chose attendue
 3. c  
 
 #### Résultat actuel
--  
+Description du problème  
 
 #### Résultat attendu
--  
+Comportement attendu  
 
 #### Fréquence
--  
+10/10  
 
 #### Reproductibilité
-- Toujours → déclenchable à coup sûr  
-- Parfois → fonctionne une fois sur X  
-- Rare → difficile à reproduire  
+Toujours → déclenchable à coup sûr  
+Parfois → fonctionne une fois sur X  
+Rare → difficile à reproduire  
 
 #### Analyse
-- Semble lié à…  
-- Se produit uniquement si…  
-- Probable conflit entre…  
-- Le problème semble provenir de…  
+Semble lié à…  
+Se produit uniquement si…  
+Probable conflit entre…  
+Le problème semble provenir de…  
 
 #### Statut
-*(choisir une seule valeur)*
-- À corriger  
-- En cours  
-- Corrigé  
-- Non prioritaire (faible impact)  
-- Won’t Fix (décision volontaire)  
+(Choisir une seule valeur)  
+À corriger  
+En cours  
+Corrigé  
+Non prioritaire (faible impact)  
+Won’t Fix (décision volontaire)  
 
 ---
 
@@ -133,7 +134,7 @@ Chose attendue
 **Origine :** Étape Z  
 
 #### Conditions
-- (Ex : être sur un objet)
+Être sur un objet  
 
 #### Étapes
 1. a  
@@ -141,29 +142,29 @@ Chose attendue
 3. c  
 
 #### Résultat actuel
--  
+Description du problème  
 
 #### Résultat attendu
--  
+Comportement attendu  
 
 #### Fréquence
--  
+10/10  
 
 #### Reproductibilité
-- Toujours → déclenchable à coup sûr  
-- Parfois → fonctionne une fois sur X  
-- Rare → difficile à reproduire  
+Toujours → déclenchable à coup sûr  
+Parfois → fonctionne une fois sur X  
+Rare → difficile à reproduire  
 
 #### Analyse
-- Semble lié à…  
-- Se produit uniquement si…  
-- Probable conflit entre…  
-- Le problème semble provenir de…  
+Semble lié à…  
+Se produit uniquement si…  
+Probable conflit entre…  
+Le problème semble provenir de…  
 
 #### Statut
-*(choisir une seule valeur)*
-- À corriger  
-- En cours  
-- Corrigé  
-- Non prioritaire (faible impact)  
-- Won’t Fix (décision volontaire)  
+(Choisir une seule valeur)  
+À corriger  
+En cours  
+Corrigé  
+Non prioritaire (faible impact)  
+Won’t Fix (décision volontaire)  
