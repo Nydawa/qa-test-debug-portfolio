@@ -4,3 +4,5 @@ Localiser et déterminer comment appeler les cibles dans les logs pour s'avoir q
 
 Nouvelle appel fais, pour appeler les recipes, ingrédients, price, baseprice.
 
+Première appel des information des product via une interface
+![Interface](Pictures/première_tentative_dappel.png)
