@@ -5,7 +5,6 @@ Localiser et déterminer comment appeler les cibles dans les logs pour s'avoir q
 Nouvelle appel fais, pour appeler les recipes, ingrédients, price, baseprice.
 
 Première appel des information des product via une interface
-![Interface](Pictures/première_tentative_dappel.png)
 
 # 🧪 In Progress - ProfitCalculator
 
@@ -282,6 +281,7 @@ Première appel des information des product via une interface
 - Recherche des bonnes données liées aux produits
 - Premiers affichages d’informations
 - Début de récupération de recipes / ingrédients / prix / basePrice
+![Lecture téléphone](Pictures/ui_phone_first_read.png)
 
 ### Session - Blocage actuel
 - Problème avec F6 dans l’application produit
