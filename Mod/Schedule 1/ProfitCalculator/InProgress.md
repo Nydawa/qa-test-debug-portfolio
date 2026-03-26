@@ -62,7 +62,7 @@ Première appel des information des product via une interface
 - [x] Harmony PatchAll actif
 - [x] Base du projet créée
 - [ ] Gestion plus fine des scènes / contextes
-- [ ] 
+
 
 ### 🧩 UI
 - [x] Fenêtre visible en jeu
