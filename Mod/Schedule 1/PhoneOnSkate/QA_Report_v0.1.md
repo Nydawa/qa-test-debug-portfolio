@@ -1,37 +1,37 @@
 # 🧪 QA Report – PhoneOnSkate v0.1
 
-**Jeux :** Schedule 1 - PhoneOnSkate  
+**Games:** Schedule 1 - PhoneOnSkate
 
 ---
 
-## 📊 Résumé
+## 📊 Summary
 
-🔴 Critiques : 1  
-🟠 Majeurs : 1  
-🟡 Mineurs : 1  
-🟢 Visuels : 0  
+🔴 Reviews: 1
+🟠 Major: 1
+🟡 Minor: 1
+🟢 Visuals: 0
 
-### 📌 Statut global
+### 📌 Overall Status
 
-✔ Corrigés : 2  
-🔧 En cours : 1  
-❗ Restants : 1  
+✔ Fixed: 2
+🔧 In Progress: 1
+❗ Remaining: 1
 
 ---
 
 ## 🔧 Dev Log
 
-**Objectif :**  
-Pouvoir utiliser le téléphone sur le skate sans dismount et continuer à rouler.
+**Goal:**
+To be able to use the phone on the skateboard without dismounting and continue riding.
 
-### Étape – Bloquer le dismount
-- Empêcher le dismount à l’ouverture du téléphone  
+### Step – Block Dismount
+- Prevent dismounting when opening the phone
 
-### Étape – Ralentir le dismount
-- Empêcher le dismount pendant 6 frames  
+### Step – Slow Dismount
+- Prevent dismounting for 6 frames
 
-### Étape – Dismount Remount
-- Remount automatique après dismount contrôlé  
+### Step – Dismount Remount
+- Automatic remounting after controlled dismounting
 
 ---
 
@@ -39,104 +39,104 @@ Pouvoir utiliser le téléphone sur le skate sans dismount et continuer à roule
 
 ---
 
-### 🔴 Bug – Freeze écran
+### 🔴 Bug – Screen Freeze
 
-**Origine :** Étape Bloquer le dismount  
+**Origin:** Step Block Dismount
 
 #### Conditions
-- Être sur le skate  
-- Ouvrir le téléphone  
+- Be on the skateboard
+- Open the phone
 
-#### Étapes
-1. Monter sur le skate  
-2. Ouvrir le téléphone  
+#### Steps
+1. Get on the skateboard
+2. Open the phone
 
-#### Résultat actuel
-- Freeze complet du jeu  
-- Apparition d’une zone noire  
+#### Current Result
+- Complete game freeze
+- Appearance of a black area
 
-#### 📷 Capture du bug
+#### 📷 Bug Screenshot
 ![Bug](Pictures/bug-block-dismount.png)
 
-#### Résultat attendu
-- Rester sur le skate avec le téléphone ouvert  
+#### Expected Result
+- Remain on the skateboard with the phone open
 
-#### Fréquence
-- 10/10  
+#### Frequency
+- 10/10
 
-#### Reproductibilité
-- Toujours → déclenchable à coup sûr  
+#### Reproducibility
+- Always → reliably triggers
 
-#### Analyse
-- Semble lié à la caméra, au joueur et au téléphone  
-- Se produit uniquement sur le skate  
-- Probable conflit entre UI et caméra  
+#### Analysis
+- Seems related to the camera, the player, and the phone
+- Only occurs on the skateboard
+- Likely UI/camera conflict
 
-#### Statut
-✔ Corrigé  
+#### Status
+✔ Fixed
 
 ---
 
 ### 🟠 Bug – Remount impossible
 
-**Origine :** Étape Ralentir le dismount  
+**Origin:** Step: Slow down dismount
 
 #### Conditions
-- Ouvrir le téléphone  
-- Attendre 6 frames  
+- Open the phone
+- Wait 6 frames
 
-#### Étapes
-1. Monter sur le skate  
-2. Ouvrir le téléphone  
+#### Steps
+1. Get on the skateboard
+2. Open the phone
 
-#### Résultat actuel
-- Aucun remount  
+#### Current result
+- No remount
 
-#### Résultat attendu
-- Remount après délai  
+#### Expected result
+- Remount after delay
 
-#### Fréquence
-- 10/10  
+#### Frequency
+- 10/10
 
-#### Reproductibilité
-- Toujours  
+#### Reproducibility
+- Always
 
-#### Analyse
-- Le skate disparaît temporairement  
-- Le remount ne peut pas s’appliquer  
+#### Analysis
+- The skateboard temporarily disappears
+- Remount cannot be applied
 
-#### Statut
-✔ Corrigé  
+#### Status
+✔ Fixed
 
 ---
 
-### 🟡 Bug – Désynchronisation caméra
+### 🟡 Bug – Camera Desynchronization
 
-**Origine :** Étape Dismount Remount  
+**Origin:** Step Dismount Remount
 
 #### Conditions
-- Ouvrir puis fermer le téléphone  
+- Open then close the phone
 
-#### Étapes
-1. Monter sur le skate  
-2. Ouvrir le téléphone  
-3. Fermer le téléphone  
+#### Steps
+1. Get on the skateboard
+2. Open the phone
+3. Close the phone
 
-#### Résultat actuel
-- Bug caméra  
+#### Current Result
+- Camera bug
 
-#### Résultat attendu
-- Caméra cohérente  
+#### Expected Result
+- Consistent camera
 
-#### Fréquence
-- 10/10  
+#### Frequency
+- 10/10
 
-#### Reproductibilité
-- Toujours  
+#### Reproducibility
+- Always
 
-#### Analyse
-- Conflit entre état joueur et caméra  
-- La caméra ne sait pas si elle doit être en first ou third person  
+#### Analysis
+- Conflict between player state and camera
+- The camera doesn't know whether to be in first or third person
 
-#### Statut
-🔧 En cours  
+#### Status
+🔧 In progress
