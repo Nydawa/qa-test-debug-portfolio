@@ -1,57 +1,81 @@
 # Lesson 03 — Conditions and Control Flow
 
-Conditions allow a mod to make decisions.
+This lesson explains how conditions control the flow of a program and determine what code runs.
 
-## Core concepts
+---
 
-* `if`: executes code only if a condition is true
-* `bool`: true / false values used in logic
-* `return`: stops execution and returns a result
+## Concept
+
+Conditions allow a program to make decisions based on values.
+
+They are used to control when something happens, such as blocking an action or allowing it depending on a state.
+
+Control flow defines the order in which code executes.
+
+---
+
+## Core Parts
+
+- if: runs code if a condition is true  
+- else: runs if the condition is false  
+- ! (not): inverts a condition  
+- && (and): requires multiple conditions to be true  
+
+---
 
 ## Example
 
-```csharp
-if (Core.BlockDismount)
-{
-    return false;
-}
-```
+    bool isPhoneOpen = true;
+    bool blockDismount = true;
 
-## Behavior
+    if (blockDismount && isPhoneOpen)
+    {
+        return false;
+    }
 
-* `return true` → allow game behavior
-* `return false` → block game behavior
+---
 
-## Negation
+## What Happens Here
 
-```csharp
-if (!Core.BlockDismount)
-{
-    return true;
-}
-```
+1. Two boolean variables are defined  
+2. The condition checks if both values are true  
+3. If true, the code inside the block executes  
+4. The function returns false, blocking the action  
 
-* `!` means NOT (inverts a boolean value)
+---
 
-## Combined conditions
+## Why It Is Useful
 
-```csharp
-if (Core.BlockDismount && Core.PhoneOpen)
-{
-    return false;
-}
-```
+- Controls when actions are allowed or blocked  
+- Essential for mod behavior (ex: prevent dismount)  
+- Allows combining multiple conditions for precise logic  
+- Used in almost every system of a mod  
 
-* `&&` means AND (both conditions must be true)
+---
 
-## Simplified logic
+## Key Idea
 
-```csharp
-return !Core.BlockDismount;
-```
+> Conditions decide what code runs based on true or false values.
 
-## Key idea
+---
 
-A mod is a decision system.
+## What I Learned
 
-It checks conditions and chooses to allow or block game actions.
+- I understood how conditions control execution  
+- I learned how to combine multiple conditions  
+- I now see how logic can block or allow actions  
+
+---
+
+## What I Still Need to Practice
+
+- I need to practice using ! to invert conditions  
+- I want to better understand complex condition combinations  
+- I should test different logic cases in real scenarios  
+
+---
+
+## Link to Real Project Use
+
+- PhoneOnSkate → uses conditions to block dismount when phone is open  
+- ProfitCalculator → uses conditions to filter and calculate values  
