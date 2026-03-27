@@ -1,138 +1,84 @@
-# 🧠 Lesson 04 — Harmony Patches & Hooks
+# Lesson 04 — Harmony Patches and Hooks
 
-## 🔍 Concept
-
-A mod does not modify the game directly.
-It connects to it by intercepting existing methods.
-
-This is called a **hook**.
-
-> When a game method is triggered, your mod can inject logic before or after it.
+This lesson explains how to hook into game methods using Harmony and modify their behavior.
 
 ---
 
-## 🧩 Harmony (Core Tool)
+## Concept
 
-We use **Harmony** to patch methods at runtime.
+Harmony allows a mod to intercept and modify existing game methods without changing the original code.
 
-It allows:
+A patch is attached to a method and runs before, after, or instead of it.
 
-* Executing code **before** a method
-* Executing code **after** a method
-* Blocking a method completely
-* Modifying behavior dynamically
+This is how mods “connect” to the game and influence its behavior.
 
 ---
 
-## ⚙️ Patch Structure
+## Core Parts
 
-```csharp
-[HarmonyPatch(typeof(ClassName), "MethodName")]
-public class Patch_Name
-{
-    static void Prefix() { }
-
-    static void Postfix() { }
-}
-```
+- HarmonyPatch: targets a specific game method  
+- Prefix: runs before the original method  
+- Postfix: runs after the original method  
+- Return control: can block or allow the original method  
 
 ---
 
-## 🔹 Prefix (Before Execution)
+## Example
 
-Runs **before** the original game method.
-
-### Use cases:
-
-* Block an action
-* Modify inputs
-* Prepare state
-
-```csharp
-static bool Prefix()
-{
-    return false; // Blocks the original method
-}
-```
-
----
-
-## 🔹 Postfix (After Execution)
-
-Runs **after** the original method.
-
-### Use cases:
-
-* Observe results
-* Adjust behavior
-* Fix side effects
-
----
-
-## 🚫 Blocking Behavior (Real Use Case)
-
-```csharp
-[HarmonyPatch(typeof(Skateboard), "Dismount")]
-public class Patch_Dismount
-{
-    static bool Prefix()
+    [HarmonyPatch(typeof(GameClass), "SomeMethod")]
+    public class Patch_SomeMethod
     {
-        if (Core.BlockDismount)
+        static bool Prefix()
         {
+            // Block original method
             return false;
         }
-
-        return true;
     }
-}
-```
-
-### Result:
-
-* If condition is true → game method is skipped
-* If false → game behaves normally
 
 ---
 
-## 🔗 Patch Activation
+## What Happens Here
 
-```csharp
-HarmonyInstance.PatchAll();
-```
-
-This applies all patches in your mod.
-
-> Without this → nothing is hooked
+1. Harmony targets a specific method in the game  
+2. The Prefix runs before the original method  
+3. The Prefix returns false  
+4. The original game method is skipped  
+5. The mod takes control of the behavior  
 
 ---
 
-## 🧬 Execution Flow
+## Why It Is Useful
 
-When a method is called:
-
-```
-Prefix → Game Method → Postfix
-```
-
-If Prefix returns `false`:
-
-```
-Prefix → (Game Method skipped) → Postfix NOT executed
-```
+- Allows modifying game behavior without editing game files  
+- Can block, change, or extend existing systems  
+- Essential for interacting with game logic  
+- Core mechanic behind most mods  
 
 ---
 
-## ⚠️ Important Understanding
+## Key Idea
 
-* A patch does not replace game code
-* It injects logic into the existing flow
-* Timing is critical (frame, transitions, state)
+> Harmony patches hook into game methods and allow modifying or blocking their behavior.
 
 ---
 
-## 🎯 Key Takeaway
+## What I Learned
 
-Harmony gives you control over **when** and **how** the game behaves.
+- I understood how patches connect to game methods  
+- I learned the difference between Prefix and Postfix  
+- I now see how a mod can control game behavior  
 
-You are no longer just observing the game.
-You are shaping its execution.
+---
+
+## What I Still Need to Practice
+
+- I need to practice finding the right methods to patch  
+- I want to better understand when to use Prefix vs Postfix  
+- I should test patches on different game functions  
+
+---
+
+## Link to Real Project Use
+
+- PhoneOnSkate → uses Harmony patches to block dismount and control phone behavior  
+- ProfitCalculator → can use patches to read game data and update UI  
