@@ -1,344 +1,362 @@
-# 🧪 In Progress - ProfitCalculator
+# 🧪 In Progress - Profit Calculator
 
-**Statut :** 🟠 In Progress  
-**Version :** v0.1  
-**Type :** Mod / Feature  
-**Projet cible :** Schedule I  
-**Objectif principal :**  
-> Créer un Profit Calculator capable de lire les données utiles des produits et de les afficher dans une interface exploitable en jeu.
+**Status:** 🟠 In Progress
+**Version:** v0.1
+**Type:** Mod / Feature
+**Target Project:** Schedule I
+**Main Objective:**
+> Create a Profit Calculator capable of reading useful product data and displaying it in a usable in-game interface.
 
-**Vision finale :**  
-> Une interface propre, idéalement liée au téléphone ou à l’application produit, qui affiche les informations utiles sur les produits, leurs recettes, leurs ingrédients, leurs coûts et leur profit estimé.
+**Final Vision:**
+> A clean interface, ideally linked to the phone or product app, that displays useful information about products, their recipes, ingredients, costs, and estimated profit.
 
 ---
 
 ## 🧱 Architecture
 
 ### Core
-- Initialisation du mod via MelonLoader
-- Chargement Harmony PatchAll
-- Gestion de l’état global du mod
-- Lancement des scans nécessaires
+- Mod initialization via MelonLoader
+- Harmony PatchAll loading
+- Management of the mod's overall state
+- Launching necessary scans
 
 ### UI
-- Fenêtre de base affichable / masquable
-- Affichage des informations récupérées
-- Système de toggle clavier actuel en F6
-- Interface encore brute
+- Basic window can be shown/hidden
+- Display of retrieved information
+- Current keyboard toggle system on F6
+- Interface still in its early stages
 
 ### Data
-- Scan des produits
-- Lecture de certaines informations utiles
-- Début de récupération des recipes / ingrédients / prix
-- Données encore incomplètes ou à confirmer
+- Product scanning
+- Reading of certain useful information
+- Beginning of recipe/ingredient/price retrieval
+- Data still incomplete or to be confirmed
 
-### Hooks / Intégration
-- Utilisation du mod dans le contexte du jeu
-- Volonté de lier le comportement à l’application produit / téléphone
-- Input clavier actuellement trop global ou mal placé selon contexte
+### Hooks / Integration
+- Using the mod within the game context
+- Desire to link behavior to the product/phone application
+- Keyboard input currently too general or poorly placed depending on the context
 
 ### Debug
-- Logs de chargement du mod
-- Vérification de l’initialisation
-- Tests d’ouverture de fenêtre
-- Tests de récupération des données produits
+- Mod loading logs
+- Initialization verification
+- Window opening tests
+- Product data retrieval tests
 
 ---
 
-## ⚙️ Progression
+## ⚙️ Progress
 
 ### 🧩 Core
-- [x] Mod chargé correctement
-- [x] Message de chargement affiché
-- [x] Harmony PatchAll actif
-- [x] Base du projet créée
-- [ ] Gestion plus fine des scènes / contextes
-
+- [x] Mod loaded correctly
+- [x] Loading message displayed
+- [x] Harmony PatchAll active
+- [x] Project base created
+- [ ] Finer scene/context management
 
 ### 🧩 UI
-- [x] Fenêtre visible en jeu
-- [x] Base de DrawWindow en place
-- [x] Affichage d’une première interface fonctionnelle
-- [ ] Interface fermée par défaut uniquement quand il faut
-- [ ] Ouverture dans le bon contexte uniquement
-- [ ] Intégration propre à l’application produit / téléphone
-- [ ] Mise en page améliorée
-- [ ] Scroll propre si nécessaire
-- [ ] Boutons / actions plus propres
+- [x] Window visible in-game
+- [x] DrawWindow base in place
+- [x] Displaying a first functional interface
+- [ ] Interface closed by default only when necessary
+- [ ] Opens only in the correct context
+- [ ] Clean integration with the product/phone application
+- [ ] Improved layout
+- [ ] Clean scrolling when necessary
+- [ ] Cleaner buttons/actions
 
 ### 🧩 Data
-- [x] Début de scan des produits
-- [x] Premier affichage d’informations de produits
-- [x] Début de récupération de certaines valeurs utiles
-- [ ] Confirmer la récupération correcte de toutes les recipes
-- [ ] Confirmer la récupération correcte des ingrédients
-- [ ] Confirmer la récupération correcte des prix
-- [ ] Confirmer la récupération correcte de basePrice
-- [ ] Structurer les données proprement
-- [ ] Préparer le vrai calcul de profit
+- [x] Product scanning started
+- [x] First display of product information
+- [x] Retrieving some useful values ​​started
+- [ ] Confirm successful retrieval of all Recipes
+- [ ] Confirm correct ingredient retrieval
+- [ ] Confirm correct price retrieval
+- [ ] Confirm correct basePrice retrieval
+- [ ] Structure data properly
+- [ ] Prepare actual profit calculation
 
 ### 🧩 Input
-- [x] Toggle F6 mis en place
-- [ ] Déterminer si l’input doit rester clavier ou passer par un bouton in-game
-- [ ] Restreindre l’ouverture à un contexte précis
-- [ ] Éviter l’ouverture au mauvais moment
+- [x] F6 toggle implemented
+- [ ] Determine if input should remain keyboard input or be accessed via an in-game button
+- [ ] Restrict opening to a specific context
+- [ ] Prevent opening at the wrong time
 
-### 🧩 Intégration
-- [ ] Identifier précisément la meilleure cible liée au téléphone / Product App
-- [ ] Déterminer comment appeler les bonnes données au bon moment
-- [ ] Relier l’interface au vrai flux du jeu
-- [ ] Rendre l’expérience plus naturelle côté joueur
+### 🧩 Integration
+- [ ] Precisely identify the best target related to the phone/Product App
+- [ ] Determine how to retrieve the correct data at the right time
+- [ ] Connect the interface to the actual game flow
+- [ ] Make the player experience more natural
 
 ### 🧩 Debug
-- [x] Logs de base présents
-- [x] Vérification du chargement effectuée
-- [x] Premiers tests d’affichage réalisés
-- [ ] Ajouter logs plus précis sur l’input F6
-- [ ] Ajouter logs sur le contexte de l’application produit
-- [ ] Réduire les erreurs et faux tests
-- [ ] Nettoyer les logs quand le comportement sera stable
+- [x] Base logs present
+- [x] Loading check Performed
+- [x] Initial display tests completed
+- [ ] Add more precise logs for input F6
+- [ ] Add logs for the application context
+- [ ] Reduce errors and false tests
+- [ ] Clean up logs when behavior is stable
 
 ---
 
-## 🔍 Découvertes techniques
+## 🔍 Technical Discoveries
 
-- Le mod se charge bien et Harmony fonctionne.
-- Une interface de base peut déjà s’afficher en jeu.
-- Le système de scan a commencé à récupérer des données utiles sur les produits.
-- Le projet avance vers la lecture des recipes, ingrédients, prix et basePrice.
-- Le comportement du toggle F6 semble poser problème dans le contexte de l’application produit.
-- L’interface actuelle fonctionne comme base de test, mais pas encore comme intégration finale.
+- The mod loads correctly and Harmony works.
 
-### Hypothèses
-- L’application produit ou le téléphone modifie la manière dont l’input est capturé.
-- Certaines données utiles existent déjà dans les objets produits mais doivent encore être correctement lues ou structurées.
-- Le meilleur résultat final viendra probablement d’une intégration dans l’UI du téléphone plutôt qu’une simple fenêtre libre.
+- A basic interface can already be displayed in-game.
 
-### Cibles importantes
+- The scanning system has started retrieving useful product data.
+
+- The project is progressing towards reading recipes, ingredients, prices, and base prices.
+
+- The behavior of the F6 toggle seems to be causing problems in the context of the product application.
+
+- The current interface works as a testbed, but not yet as a final integration.
+
+### Assumptions
+- The product application or the phone modifies how the input is captured.
+
+- Some useful data already exists in the product objects but still needs to be correctly read or structured.
+
+- The best final result will likely come from integration into the phone's UI rather than a simple free-standing window.
+
+### Important Targets
 - `Core.cs`
 - `Scan.cs`
 - `DrawWindow`
-- Système de l’application produit / téléphone
-- Système d’input en jeu
+- Product/Phone Application System
+- Input System in Play
 
 ---
 
-## 🧠 Problèmes rencontrés
+## 🧠 Issues Encountered
 
-### ❌ L’interface s’ouvre / existe encore comme outil global de test
-- **Description :** la fenêtre actuelle sert de base technique mais n’est pas encore liée proprement au bon contexte.
-- **Cause probable :** la logique d’ouverture est encore trop générale.
-- **Impact :** l’expérience n’est pas encore naturelle ni finalisée.
-- **Statut :** En cours
+### ❌ The interface opens/still exists as a global testing tool
+- **Description:** The current window serves as a technical basis but is not yet properly linked to the correct context.
 
-### ❌ Les données utiles ne sont pas encore complètement fiabilisées
-- **Description :** les recipes, ingrédients, prix et basePrice ne sont pas encore tous validés proprement.
-- **Cause probable :** la structure exacte des données n’est pas encore totalement confirmée.
-- **Impact :** impossible pour l’instant de faire un Profit Calculator complet et fiable.
-- **Statut :** En cours
+- **Probable Cause:** The opening logic is still too general.
+
+- **Impact:** The experience is not yet natural or finalized.
+
+- **Status:** In progress
+
+### ❌ The useful data is not yet fully reliable
+- **Description:** Recipes, ingredients, prices, and basePrice are not all properly validated yet.
+
+- **Probable cause:** The exact data structure is not yet fully confirmed.
+
+- **Impact:** It is currently impossible to create a complete and reliable Profit Calculator.
+
+- **Status:** In progress
 
 ---
 
-## 🛠 Solutions testées
+## 🛠 Tested Solutions
 
-### ✔ Base du mod
-- **Action :** création du projet MelonLoader + Core + PatchAll.
-- **Résultat :** OK
-- **Notes :** le mod charge correctement.
+### ✔ Mod Base
+- **Action:** Creation of the MelonLoader + Core + PatchAll project.
+- **Result:** OK
+- **Notes:** The mod loads correctly.
 
-### ✔ Interface de base
-- **Action :** mise en place d’une première fenêtre affichable en jeu.
-- **Résultat :** OK
-- **Notes :** bonne base de travail pour afficher les futures données.
+### ✔ Basic Interface
+- **Action:** Implementation of an initial in-game window.
+- **Result:** OK
+- **Notes:** A good starting point for displaying future data.
 
-### ✔ Scan initial
-- **Action :** début du système de scan pour récupérer les produits.
-- **Résultat :** OK
-- **Notes :** les premières données remontent, mais la structure finale reste à fiabiliser.
+### ✔ Initial Scan
+- **Action:** Start of the scanning system to retrieve products.
+
+- **Result:** OK
+- **Notes:** Initial data is retrieved, but the final structure still needs to be refined.
 
 ### ✔ Toggle F6
-- **Action :** ajout d’une touche pour afficher / masquer la fenêtre.
-- **Résultat :** OK
-- **Notes :** fonctionne comme base, mais pose problème dans l’application produit.
+- **Action:** Added a key to show/hide the window.
+
+- **Result:** OK
+- **Notes:** Works as a base, but has issues in the final product application.
 
 ---
 
-## 🛠 Choix techniques
+## 🛠 Technical Choices
 
-- **Technologie principale :** C#
-- **Framework / Loader :** MelonLoader
-- **Patch system :** Harmony
-- **Type d’interface :** UI simple de test en jeu
-- **Projet ciblé :** Schedule I
+- **Main Technology:** C#
+- **Framework / Loader:** MelonLoader
+- **Patch System:** Harmony
+- **Interface Type:** Simple in-game testing UI
+- **Target Project:** Schedule I
 
-### Choix validés
-- Utiliser MelonLoader pour la base du mod
-- Utiliser Harmony pour les patches
-- Commencer par une UI simple pour valider les données avant une intégration plus poussée
-- Construire d’abord le scan avant de raffiner le rendu
+### Validated Choices
+- Use MelonLoader for the mod's base
+- Use Harmony for patches
+- Start with a simple UI to validate data before further integration
+- Build the scan first before refining the rendering
 
-### Refusés / écartés
-- Partir trop tôt sur une UI finale sans valider les données
-- Complexifier le projet avant d’avoir un flux de données fiable
+### Rejected / Discarded
+- Start too early with a final UI without validating the data
+- Make the project more complex before having a reliable data flow
 
 ---
 
-## 📊 État actuel
+## 📊 Current Status
 
-### ✅ Fonctionne
-- Chargement du mod
-- Initialisation Harmony
-- Base du projet
-- Première interface visible
-- Début du scan des produits
-- Premiers affichages d’informations
-  
-![Première lecture depuis téléphone](Pictures/ui_phone_first_read.png)
+### ✅ Working
+- Mod loading
+- Harmony initialization
+- Project base
+- First interface visible
+- Product scanning begins
+- First information displayed
 
-### ⚠️ Partiel
-- Lecture complète des données produits
-- Structure des données
-- Lien entre l’interface et le bon contexte de jeu
+![First read from phone](Pictures/ui_phone_first_read.png)
 
-### ❗ À faire
-- Stabiliser la récupération recipes / ingrédients / prix / basePrice
-- Transformer l’outil de test en vraie feature cohérente
-- Préparer le calcul de profit réel
-- Rendre l’interface plus propre et logique
+### ⚠️ Partial
+- Complete reading of product data
+- Data structure
+- Link between the interface and the correct game context
+
+### ❗ To Do
+- Stabilize the retrieval of recipes / ingredients / price / base price
+- Transform the test tool into a fully functional feature
+- Prepare the calculation of real profit
+- Make the interface cleaner and more logical
 
 ---
 
 ## 🔮 Roadmap
 
 ### Phase 1 - Base
-- [x] Créer le mod
-- [x] Charger Harmony
-- [x] Afficher une première fenêtre
-- [x] Démarrer le scan des produits
+- [x] Create the mod
+- [x] Load Harmony
+- [x] Display a first window
+- [x] Start scanning Products
 
-### Phase 2 - Lecture des données
-- [ ] Finaliser la récupération des produits
-- [ ] Lire proprement les recipes
-- [ ] Lire proprement les ingrédients
-- [ ] Lire proprement les prix
-- [ ] Lire proprement basePrice
-- [ ] Structurer les données pour les calculs
+### Phase 2 - Data Reading
+- [ ] Finalize product retrieval
+- [ ] Properly read recipes
+- [ ] Properly read ingredients
+- [ ] Properly read prices
+- [ ] Properly read basePrice
+- [ ] Structure data for calculations
 
-### Phase 3 - Intégration
-- [ ] Relier l’interface au bon contexte
-- [ ] Intégrer l’outil à l’application produit / téléphone
-- [ ] Éviter l’ouverture hors contexte
+### Phase 3 - Integration
+- [ ] Link the interface to the correct context
+- [ ] Integrate the tool into the product/phone application
+- [ ] Prevent out-of-context opening
 
-### Phase 4 - Profit Calculator réel
-- [ ] Calculer coût / profit
-- [ ] Afficher les résultats clairement
-- [ ] Ajouter tri / lisibilité / confort
-- [ ] Préparer une version plus propre
+### Phase 4 - Actual Profit Calculator
+- [ ] Calculate cost/profit
+- [ ] Display results clearly
+- [ ] Add sorting/readability/user-friendliness
+- [ ] Prepare a cleaner version
 
-### Phase 5 - Finalisation
-- [ ] Nettoyer le code
-- [ ] Réduire les logs inutiles
-- [ ] Tester plusieurs situations
-- [ ] Préparer une version présentable
+### Phase 5 - Finalization
+- [ ] Clean up the code
+- [ ] Reduce unnecessary logs
+- [ ] Test various scenarios
+- [ ] Prepare a presentable version
 
 ---
 
 ## 🧾 Dev Notes
 
-### Session - Base du projet
-- Création du mod ProfitCalculator
-- Core en place
-- Chargement MelonLoader validé
-- Harmony PatchAll validé
-- Base du système prête
+### Session - Project Base
+- ProfitCalculator mod created
+- Core installed
+- MelonLoader load validated
+- Harmony PatchAll validated
+- System base ready
 
-### Session - Première UI
-- Fenêtre de base créée
-- Affichage en jeu fonctionnel
-- Début des tests d’ouverture / fermeture
-- L’outil existe désormais visuellement
+### Session - First UI
+- Basic window created
+- Functional in-game display
+- Started opening/closing tests
+- The tool now exists visually
 
-### Session - Scan produits
-- Début du travail sur le scan
-- Recherche des bonnes données liées aux produits
-- Premiers affichages d’informations
-- Début de récupération de recipes / ingrédients / prix / basePrice
+### Session - Product Scanning
+- Started work on scanning
+- Searching for the correct product data
+- Initial information displays
+- Started retrieving recipes/ingredients/prices/basePrices
 
-![Lecture téléphone](Pictures/ui_phone_first_read.png)
+![Phone reading](Pictures/ui_phone_first_read.png)
 
-### Session - Blocage actuel
-- Problème avec F6 dans l’application produit
-- L’interface n’est pas encore intégrée au bon contexte final
-- Il faut maintenant stabiliser l’input et les données
+### Session - Current Blockage
+- Issue with F6 in the product application
+- The interface is not yet integrated into the correct final context
+- Input and data now need stabilization
 
-### 🔧 Amélioration Interface – Système de filtres avancés
+### 🔧 Interface Improvement – ​​Advanced Filtering System
 
-**Objectif :**
-Permettre un tri intelligent des recettes pour améliorer la prise de décision en jeu.
-
----
-
-**Ajouts prévus :**
-
-* Système de tri avec **jusqu’à 4 filtres actifs**
-* Critères disponibles :
-
-  * 💰 Prix
-  * 📈 Profit (%)
-  * 🧪 Nombre d’ingrédients
-  * ✨ Effet (limité à 1)
+**Objective :**
+Enable intelligent recipe sorting to improve in-game decision-making.
 
 ---
 
-**Choix de design :**
+**Planned Additions:**
 
-* Maximum 4 filtres pour éviter surcharge visuelle
-* Limitation à 1 effet pour garder une UI claire (surtout sur téléphone)
-* Priorité des filtres définie par l’ordre (Filtre 1 → Filtre 4)
+* Sorting system with **up to 4 active filters**
+* Available criteria:
 
----
-
-**Utilisation prévue :**
-
-* Trouver la recette la plus rentable
-* Adapter la production selon les préférences client
-* Optimiser le craft (coût / complexité)
+* 💰 Price
+* 📈 Profit (%)
+* 🧪 Number of ingredients
+* ✨ Effect (limited to 1)
 
 ---
 
-**Statut :**
-🟠 En réflexion (design validé, pas encore implémenté)
+**Design Choices:**
+
+* Maximum 4 filters to avoid visual clutter
+* Limited to 1 effect to maintain a clean UI (especially on mobile)
+* Filter priority defined by order (Filter 1 → Filter 4)
 
 ---
 
-**Notes :**
+**Intended Uses:**
 
-* Fonctionnalité prévue après stabilisation du système actuel (scan + affichage)
-* Possibilité d’évolution vers multi-effets plus tard
+* Find the most profitable recipe
+* Adapt production according to customer preferences
+* Optimize crafting (cost/complexity)
+  
+---
+
+**Status:**
+🟠 Under consideration (design approved, not yet implemented)
+
+---
+
+**Notes:**
+
+* Feature planned after stabilization of the current system (scan + display)
+* Possibility of evolving to include multiple effects later
 
 ---
 
 ## 📤 Export
 
 ### DevLog
-- Base du mod créée
-- Première interface fonctionnelle
-- Début du scan des produits
-- Premières données visibles en jeu
-- Début du travail vers recipes / ingrédients / prix / basePrice
-- Transfert de l'interface vers application
+- Mod base created
+- First functional interface
+- Product scanning started
+- First data visible in-game
+- Work started on recipes / ingredients / price / basePrice
+- Interface transferred to application
 
 ### QA_Report
-- Problème de toggle F6 dans l’application produit
-- Intégration UI encore trop brute / globale
-- Données encore incomplètes pour le calcul final
+- F6 toggle issue in the product application
+- UI integration still too rough/global
+- Data still incomplete for final calculation
 
 ---
 
-## 🧿 Notes libres
+## 🧿 Free Notes
 
-- Le mod a déjà dépassé le simple stade “idée”.
-- La prochaine vraie marche importante est de stabiliser la lecture des données.
-- Le second point critique est de décider comment l’utilisateur ouvre l’outil dans le vrai contexte.
-- Une fois recipes + ingrédients + prix stabilisés, le cœur du Profit Calculator pourra vraiment commencer.
-- Tester sur une grande partie pour voir si toutes les identités sont correctes.
+- The mod has already moved beyond the "idea" stage.
+
+- The next major step is to stabilize data reading.
+
+- The second critical point is deciding how the user opens the tool in the real-world context.
+
+- Once recipes, ingredients, and prices are finalized, the core of the Profit Calculator can truly begin.
+
+- Test on a large dataset to ensure all identities are correct.
