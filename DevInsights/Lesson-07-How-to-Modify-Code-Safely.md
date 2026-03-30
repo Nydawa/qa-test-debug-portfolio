@@ -1,16 +1,17 @@
-# Lesson 07 —  How to Modify Code Safely
+# Lesson 07 — How to Modify Code Safely
 
 Brief lesson summary in 1 or 2 sentences.
+
+Modifying code safely means changing behavior **without breaking existing systems**.  
+Instead of removing logic, you **control and wrap it** to keep the game stable.
 
 ---
 
 ## Concept
 
-Explain the main idea of the lesson in simple terms.
-
-- What is it?
-- Where is it used?
-- Why does it matter in modding?
+- No bugs
+- No side effects
+- No disruption to other systems
 
 ---
 
@@ -24,57 +25,53 @@ Explain the main idea of the lesson in simple terms.
 
 ## Example
 
-    // Put a simple and clear example here
+    ```csharp
+    public static bool BlockDamage;
 
-    int score = 10;
-    bool isActive = true;
-
-    if (isActive)
+    public void TakeDamage(int amount)
     {
-        score += 5;
+    if (!BlockDamage)
+    {
+        health -= amount;
+    }
     }
 
 ---
 
 ## What Happens Here
 
-Explain the code step by step.
-
-1. A variable is created  
-2. A condition is checked  
-3. The value is modified  
+A control variable (BlockDamage) is created
+The method TakeDamage is called
+The condition checks if damage is allowed
+If allowed → damage is applied
+If blocked → nothing happens
 
 ---
 
 ## Why It Is Useful
 
-Explain why this is important in real modding.
+This is important in real modding because:
 
-- Helps control behavior  
-- Allows interaction with game systems  
-- Used in patches and logic  
+Helps control behavior without breaking systems
+Prevents crashes and side effects
+Allows safe interaction with game logic
+Used in patches and runtime modifications
 
 ---
 
 ## Key Idea
 
-> Write ONE clear sentence that defines the lesson.
-
----
-
-## What I Learned
-
-- I understood that ...  
-- I learned how ...  
-- I now see the difference between ...  
+- I understood that code is connected and sensitive
+- I learned how to block behavior using conditions and flags
+- I now see the difference between removing logic and controlling it
 
 ---
 
 ## What I Still Need to Practice
 
-- I still need to practice ...  
-- I want to better understand ...  
-- I should test this with ...  
+- I still need to practice identifying safe modification points
+- I want to better understand timing and coroutines
+- I should test this with different game systems
 
 ---
 
@@ -82,5 +79,5 @@ Explain why this is important in real modding.
 
 Connect this lesson to your real mods.
 
-- PhoneOnSkate → explain usage  
-- ProfitCalculator → explain usage  
+- PhoneOnSkate → blocking dismount safely using BlockDismount and timing windows
+- ProfitCalculator → reading UI data without breaking the game flow
